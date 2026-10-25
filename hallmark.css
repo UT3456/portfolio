@@ -1,9 +1,9 @@
-/* Hallmark · shape: Narrative Workflow · genre: modern-minimal · theme: Console (deal 2/3) · job: hire · draw: 4f31c2
- * hero: Poster · nav: edge-aligned · footer: index columns · imagery: none · signature: interactive request budget · console: graphite
+/* Hallmark · redesign: full · shape: Index-First · genre: modern-minimal · theme: Console (kept brand) · job: hire
+ * hero: Stage · nav: edge-aligned · footer: index columns · imagery: none · signature: linked project index and interactive request budget · console: graphite
  * axes: dark/grotesk-sans/chromatic-amber · posture: restrained · contrast: pending · fold: pending · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4 · weakest: S, replaced generic claims with named Java projects */
-/* Hallmark · waive 77 · three full-width service rows at 100px each · the Java capabilities are a reading index, not an image section */
-/* Hallmark · dismissed 58 · the 87-word window straddles two distinct project sections; each project remains concise */
+/* Hallmark · waive 44c · headline, sentence and action fit at 1280x800 · the Java project index extends to the fold, independently of the shorter copy column */
+/* Hallmark · waive 79 · project index visibly reaches y836 at 1440x900 · the detector measures only the Java copy column and excludes the linked index */
 @import url('./tokens.css');
 @import url('./base.css');
 @font-face{font-family:'Host Grotesk';src:url('./assets/fonts/host-grotesk-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:swap}
@@ -40,3 +40,31 @@ details p{padding-bottom:var(--space-lg);color:var(--color-muted)}
 #result{min-height:3lh}.credit{color:var(--color-muted)}
 @media(max-width:40rem){nav div{gap:var(--space-sm)}.hero-index{flex-direction:column}.hero{gap:var(--space-lg)}.actions{flex-wrap:wrap}.case,.about,.rows>div{grid-template-columns:minmax(0,1fr)}.demo{padding:var(--space-lg)}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}button:active,.button:active{transform:none}}
+
+/* The existing palette and locally hosted face remain the brand. */
+:root{--container:1320px;--section-gap-s:96px}
+nav{min-height:88px}nav a{min-height:44px;display:inline-flex;align-items:center}
+.hero{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:var(--space-2xl);min-height:calc(100svh - 88px);align-items:center}
+.hero-copy{display:flex;flex-direction:column;gap:var(--space-xl)}
+h1{font-size:clamp(3.2rem,6.7vw,6.5rem);line-height:1.02}
+.hero-index{display:flex;flex-direction:column;justify-content:center;border-top:0;border-left:1px solid var(--color-rule-2);padding:0 0 0 var(--space-xl);gap:0}
+.hero-index a{font-size:var(--text-title);min-height:112px;display:flex;align-items:center;text-decoration:none;border-bottom:1px solid var(--color-rule);color:var(--color-ink-2)}
+.hero-index a:hover{color:var(--color-accent)}
+@media(min-width:60.01rem){.hero-index a{min-height:0;flex:1;align-items:flex-end;padding-bottom:var(--space-lg)}.hero-index{min-height:calc(100svh - 216px)}h1{font-size:clamp(3.2rem,7.4vw,7rem)}}
+#work{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:var(--gap-columns);align-items:start;border-top:1px solid var(--color-rule)}
+#work .rows{min-height:0}#work .rows>div{min-height:88px}
+.rows>div{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr)}
+#claims .section{gap:var(--space-lg)}
+#claims .case{margin-block:var(--space-xl);grid-template-columns:minmax(0,1fr) minmax(0,1.5fr)}
+#agents{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:var(--space-xl) var(--gap-columns)}
+#agents h2{grid-column:1}#agents>.lead{grid-column:1;grid-row:2}
+#agents .project-detail{grid-column:2;grid-row:1/3;border:0;background:var(--color-paper-2);padding:var(--space-xl)}
+#limiter .section{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:var(--space-lg) var(--gap-columns)}
+#limiter h2,#limiter .lead,#limiter details,#limiter .section>a{grid-column:1}
+#limiter .demo{grid-column:2;grid-row:1/5;justify-content:center}
+.demo output{font-size:clamp(4rem,8vw,8rem)}
+#about{gap:var(--space-2xl)}
+footer .section{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:var(--space-xl) var(--gap-columns)}
+footer h2,footer .lead{grid-column:1}footer .actions{grid-column:2;grid-row:1/3;flex-wrap:wrap;align-content:center}footer .credit{grid-column:1/-1;border-top:1px solid var(--color-rule);padding-top:var(--space-lg)}
+@media(max-width:60rem){.hero{gap:var(--space-xl)}.hero-index{padding-left:var(--space-lg)}.hero-index a{font-size:var(--text-lg)}#work,#agents,#limiter .section,footer .section{grid-template-columns:minmax(0,1fr)}#agents .project-detail,#agents>.lead,#limiter .demo,footer .actions{grid-column:auto;grid-row:auto}.case,.about,#claims .case{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:40rem){nav{gap:var(--space-sm)}nav a{font-size:var(--text-sm)}.hero{grid-template-columns:minmax(0,1fr);min-height:auto;padding-block:var(--space-2xl);gap:var(--space-xl)}.hero-index{border-left:0;border-top:1px solid var(--color-rule);padding:0}.hero-index a{min-height:64px}.section{padding-block:var(--space-2xl)}.rows>div{grid-template-columns:minmax(0,1fr);gap:var(--space-xs)}#agents .project-detail{padding:var(--space-lg)}footer .actions{align-items:flex-start;flex-direction:column}}
