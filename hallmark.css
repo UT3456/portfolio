@@ -1,0 +1,42 @@
+/* Hallmark · shape: Narrative Workflow · genre: modern-minimal · theme: Console (deal 2/3) · job: hire · draw: 4f31c2
+ * hero: Poster · nav: edge-aligned · footer: index columns · imagery: none · signature: interactive request budget · console: graphite
+ * axes: dark/grotesk-sans/chromatic-amber · posture: restrained · contrast: pending · fold: pending · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4 · weakest: S, replaced generic claims with named Java projects */
+/* Hallmark · waive 77 · three full-width service rows at 100px each · the Java capabilities are a reading index, not an image section */
+/* Hallmark · dismissed 58 · the 87-word window straddles two distinct project sections; each project remains concise */
+@import url('./tokens.css');
+@import url('./base.css');
+@font-face{font-family:'Host Grotesk';src:url('./assets/fonts/host-grotesk-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Host Grotesk';src:url('./assets/fonts/host-grotesk-latin-500-normal.woff2') format('woff2');font-weight:500;font-display:swap}
+nav{display:flex;justify-content:space-between;align-items:center;min-height:80px;border-bottom:1px solid var(--color-rule);gap:var(--space-lg)}
+nav div,.actions{display:flex;align-items:center;gap:var(--space-lg)}
+nav a{text-decoration:none;white-space:nowrap;font-size:var(--text-sm)}
+.brand{font-size:var(--text-md)}
+a:hover{color:var(--color-accent)}
+.hero{min-height:calc(100svh - 80px);display:flex;flex-direction:column;justify-content:center;gap:var(--space-xl);padding-block:var(--space-2xl)}
+h1{font-size:clamp(3.5rem,8vw,8rem);max-width:15ch}
+.lead{color:var(--color-ink-2)}
+.actions a{white-space:nowrap}
+.button,button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:var(--space-sm) var(--space-lg);border:1px solid var(--color-rule-2);border-radius:var(--radius-pill);background:var(--color-paper-2);color:var(--color-ink);text-decoration:none;cursor:pointer}
+.primary{background:var(--color-accent);color:var(--color-accent-ink);border-color:var(--color-accent)}
+.primary:hover{background:var(--color-ink);color:var(--color-paper)}
+button:hover{border-color:var(--color-accent)}
+button:active,.button:active{transform:translateY(1px)}
+button:disabled{opacity:.55;cursor:not-allowed}
+.hero-index{display:flex;justify-content:space-between;gap:var(--space-lg);border-top:1px solid var(--color-rule);padding-top:var(--space-lg);color:var(--color-muted)}
+.skip{position:absolute;transform:translateY(-200%);padding:var(--space-sm);background:var(--color-paper-2);z-index:var(--z-toast)}
+.skip:focus-visible{transform:none}
+.section{padding-block:var(--section-gap-s);display:flex;flex-direction:column;gap:var(--space-xl)}
+#work .rows{display:block;min-height:300px}#work .rows>div{min-height:100px;align-items:center}
+.band{background:var(--color-paper-2);color:var(--color-ink)}
+.rows{margin:0;width:100%}.rows>div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:var(--gap-columns);padding-block:var(--space-lg);border-bottom:1px solid var(--color-rule)}
+dt{font-weight:500}dd{margin:0;color:var(--color-muted)}
+.case,.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:var(--gap-columns)}
+.project-detail{display:flex;flex-direction:column;gap:var(--space-lg);padding-block:var(--space-xl);border-block:1px solid var(--color-rule)}
+.demo{padding:var(--space-xl);background:var(--color-paper-3);color:var(--color-ink);display:flex;flex-direction:column;gap:var(--space-lg)}
+output{font-family:var(--font-outlier);font-size:var(--text-display);color:var(--color-cool);font-variant-numeric:tabular-nums}
+summary{cursor:pointer;padding-block:var(--space-md)}
+details p{padding-bottom:var(--space-lg);color:var(--color-muted)}
+#result{min-height:3lh}.credit{color:var(--color-muted)}
+@media(max-width:40rem){nav div{gap:var(--space-sm)}.hero-index{flex-direction:column}.hero{gap:var(--space-lg)}.actions{flex-wrap:wrap}.case,.about,.rows>div{grid-template-columns:minmax(0,1fr)}.demo{padding:var(--space-lg)}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}button:active,.button:active{transform:none}}
